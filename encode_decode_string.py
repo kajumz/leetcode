@@ -11,7 +11,7 @@ def decode(str):
     while s[j] != "#":
       j+=1
     l = int(str[i:j])
-    res.append(s[j+1:j+1+l])
+    res.append(str[j+1:j+1+l])
     i=j+1+l
   return res
   
