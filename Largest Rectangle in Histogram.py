@@ -1,0 +1,14 @@
+#using stack indexes ans renew ans when h[stack[-1]]>h[i]
+
+def largestRectangleArea(self, heights: List[int]) -> int:
+        heights.append(0)
+        stack = [-1]
+        ans = 0
+        for i in range(len(heights)):
+            while heights[i] < heights[stack[-1]]:
+                h = heights[stack.pop()]
+                w = i - stack[-1]-1
+                ans = max(ans,h*w)
+            stack.append(i)
+        stack.pop()
+        return ans
