@@ -1,3 +1,4 @@
+
 def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         parentval = root.val
         pval = p.val
